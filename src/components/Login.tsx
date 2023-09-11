@@ -1,35 +1,27 @@
 import React, { useState } from 'react'
-import TextField from '@mui/material/TextField'
-import Typography from '@mui/material/Typography'
+import { TextField, Typography, Button } from '@mui/material';
 
 
 const Login = () => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-
     const handleSubmit = () => {
 
     }
 
     return (
         <>
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px"}}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px", marginBottom: "50px" }}>
                 <Typography variant="body1" color="initial">CONTENT FORM</Typography>
                 <div>
                     <form onSubmit={handleSubmit} style={{ display: "flex", gap: "20px" }}>
                         <TextField
                             id="username"
                             label="Username"
-                            value={username}
-                            onChange={(event) => { setUsername(event.target.value) }}
                         />
                         <TextField
                             id="password"
                             label="Password"
-                            value={password}
-                            onChange={(event) => { setPassword(event.target.value) }}
-
                         />
+                        <Button type="submit">Login</Button>
                     </form>
                 </div>
             </div>
